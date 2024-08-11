@@ -3,15 +3,46 @@
 
 int main(int argc, char * argv[]){
 
+    while(1){
+    
+        //Misc. Declaration of Variables
+        int choice = 0;
+        
+        //Program presents user with program options
+        printf("\nSimple Encyption v0.1");
+        printf("\n----------------------");
+        printf("\n1. Encryption");
+        printf("\n2. Decryption");
+        printf("\n3. Exit");
+        
+        //Checking that input is correct
 
+        int checker = scanf("%d", &choice);
 
-printf("\nSimple Encyption v.1\n");
-printf("\nInput Message: ");
+        if (checker == 2){
+            prinft("\n\nValid Input Detected");
+        }else if (checker == 1 || checker == 0){
+            prinft("\n\nError: Invalid Input Detected");
+            continue;
+        }else{
+            printf("\n\nError: Unknown 'scanf' Error Code");
+        }
 
-fgets(input, sizeof(input), stdin);
+        //Processing of user choice and execution
+        //TODO: Adopt more object orientated approach to program
 
-printf("%s", input);
+        if (choice == 1){
+            printf("\n\nProgram Current Setting: Encryption");
+        }else if (choice == 2){
+            printf("\n\nProgram Current Setting: Decryption");
+        }else if (choice ==3){
+            printf("\n\nProgram Current Setting: Exit");
+            break;
+        }else{
+            printf("\n\nError: Invalid Choice. Please try again.");
+        }
 
+    }
 
 return 0;
 

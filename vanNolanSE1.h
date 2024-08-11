@@ -3,11 +3,4 @@
 #include <stdlib.h>
 #include <ctype.h>
 
-struct message{
 
-
-
-
-};
-
-char input[1000];
