@@ -1,0 +1,19 @@
+CC = gcc
+CFLAGS = -Wall -Wextra -std=c11
+TARGET = simpleEncryption
+SRC = simpleEncryptionMain.c simpleEncryptionFunctions.c
+OBJ = simpleEncryptionMain.o simpleEncryptionFunctions.o
+
+all: $(TARGET)
+
+$(TARGET): $(OBJ)
+	gcc -Wall -Wextra -std=c11 -o simpleEncryption simpleEncryptionMain.o simpleEncryptionFunctions.o
+
+simpleEncryptionMain.o: simpleEncryptionMain.c simpleEncryptionHeader.h
+	gcc -Wall -Wextra -std=c11 -c simpleEncryptionMain.c
+
+simpleEncryptionFunctions.o: simpleEncryptionFunctions.c simpleEncryptionHeader.h
+	gcc -Wall -Wextra -std=c11 -c simpleEncryptionFunctions.c
+
+clean:
+	rm -f simpleEncryptionMain.o simpleEncryptionFunctions.o simpleEncryption
