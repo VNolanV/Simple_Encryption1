@@ -10,3 +10,5 @@
 #define MAXMESSAGESIZE 100
 
 char simpleencryptdecrypt(char givenchar);
+
+char rsaencrypt (char givenchar);

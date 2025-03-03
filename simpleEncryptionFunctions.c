@@ -9,9 +9,18 @@ char simpleencryptdecrypt(char givenchar) {
     }
     else if (givenchar == ' ') {
         return '/';
-    } 
+    }
+    else if (givenchar == '/') {
+        return ' ';
+    }
     else {
         return givenchar;
     }
+}
+
+char rsaencryptdecrypt (char [] givenmessage){
+
+    
+
 }
 

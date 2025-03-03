@@ -17,14 +17,24 @@ int main() {
         printf("--------\nPlease enter plaintext or ciphertext:\n-------\n");
         fgets(message, sizeof(message), stdin);
 
-        printf("Encryption/Decryption: ");
+        printf("Encryption/Decryption: \n");
         for (int i = 0; message[i] != '\0' && message[i] != '\n'; i++) {
             printf("%c", simpleencryptdecrypt(toupper(message[i])));
         }
         printf("\n");
 
     } else if (choice == 2) {
-        printf("Feature Under Development\n");
+        char message[MAXMESSAGESIZE];
+
+        printf("--------\nOption #2: RSAEncryption Selected\n-------\n");
+        printf("--------\nPlease enter plaintext or ciphertext:\n-------\n");
+        fgets(message, sizeof(message), stdin);
+
+        printf("Encryption/Decryption: \n");
+        for (int i = 0; message[i] != '\0' && message[i] != '\n'; i++) {
+            printf("%c", simpleencryptdecrypt(toupper(message[i])));
+        }
+        printf("\n");
     } else {
         printf("--------\nERROR: Invalid Choice - Killing Program\n-------\n");
     }
